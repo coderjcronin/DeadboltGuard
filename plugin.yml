@@ -1,0 +1,4 @@
+name: DeadBoltGuard
+main: com.github.coderjcronin.deadboltguard.DeadBoltGuard
+version: 1.0
+depend: [WorldGuard, Deadbolt]
