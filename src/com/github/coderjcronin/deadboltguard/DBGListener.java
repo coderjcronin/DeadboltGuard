@@ -1,11 +1,5 @@
 package com.github.coderjcronin.deadboltguard;
 
-//import java.util.Arrays;
-//import java.util.List;
-//import java.util.Set;
-//import java.util.HashSet;
-
-//import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
@@ -15,17 +9,17 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.event.EventHandler;
-//import org.bukkit.plugin.java.JavaPlugin;
 
-//import com.daemitus.deadbolt.Deadbolt;
 import com.daemitus.deadbolt.Deadbolt;
-//import com.daemitus.deadbolt.Deadbolted;
 import com.daemitus.deadbolt.listener.DeadboltListener;
+
 import com.sk89q.worldguard.bukkit.WorldGuardPlugin;
 
+//Do we really need to extend DeadboltListener? We're intercepting PlayerInteractEvent, which is part of org.bukkit
 public class DBGListener extends DeadboltListener implements Listener {
 	private final Deadbolt plugin = Deadbolt.instance;
 	
+	//Load WorldGuard, don't worry abou the 'return null;' since we're listed as depending on WorldGuard.
 	private WorldGuardPlugin getWorldGuard() {
 	    Plugin wplugin = DeadBoltGuard.getInstance().getServer().getPluginManager().getPlugin("WorldGuard");
 	 

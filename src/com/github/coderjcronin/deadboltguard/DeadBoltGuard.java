@@ -2,12 +2,10 @@ package com.github.coderjcronin.deadboltguard;
 
 import java.util.logging.Logger;
 
-//import org.bukkit.plugin.Plugin;
+
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
-
-//import com.sk89q.worldguard.bukkit.WorldGuardPlugin;
 
 public class DeadBoltGuard extends JavaPlugin {
 	
