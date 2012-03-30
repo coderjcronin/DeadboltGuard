@@ -1,0 +1,20 @@
+DeadboltGuard
+by CoderJCronin
+
+DeadboltGuard is a CraftBukkit plugin that works to resolve an issue with
+DeadBolt ignoring WorldGuard permissions when quick-placing a sign (issue #44:
+Bypasses WorldGuard @ https://github.com/daemitus/Deadbolt/issues/44).
+
+DeadboltGuard hooks the PlayerInteractEvent to see if the player is holding a
+sign and if they have permission to build (or rather, lack of permission). If 
+both checks are met and the event hasn't been cancelled already, the plugin
+cancels the sign placement and throws the Deadbolt error for modifying the
+chest.
+
+No configuration is necessary, just drop DeadBoltGuard.jar in the plugins
+folder and you are off to the races. Obviously, this plugin will not load
+if WorldGuard and Deadbolt are not also enabled.
+
+Version History
+
+v1.0 - Initial Commit
