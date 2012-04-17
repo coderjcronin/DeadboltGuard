@@ -1,20 +1,18 @@
-DeadboltGuard
+WorldGuardListener
 by CoderJCronin
 
-DeadboltGuard is a CraftBukkit plugin that works to resolve an issue with
+DeadboltGuard was a CraftBukkit plugin that works to resolve an issue with
 DeadBolt ignoring WorldGuard permissions when quick-placing a sign (issue #44:
 Bypasses WorldGuard @ https://github.com/daemitus/Deadbolt/issues/44).
 
-DeadboltGuard hooks the PlayerInteractEvent to see if the player is holding a
-sign and if they have permission to build (or rather, lack of permission). If 
-both checks are met and the event hasn't been cancelled already, the plugin
-cancels the sign placement and throws the Deadbolt error for modifying the
-chest.
+DeadboltGuard is now WorldGuardListener; simply extract WorldGuardListener.class
+from the jar and drop it in the "listeners" folder of Deadbolt's plugin folder.
 
-No configuration is necessary, just drop DeadBoltGuard.jar in the plugins
-folder and you are off to the races. Obviously, this plugin will not load
-if WorldGuard and Deadbolt are not also enabled.
+Sorry for the delay and hack first release; for some reason relase Deadbolt is
+a lot different from the source (source references DeadboltPlugin, release merged
+this Deadbolt... other oddities).
 
 Version History
 
+v2.0 - Rejiggered all code; now operates as a drop-in listener for Deadbolt
 v1.0 - Initial Commit
